@@ -3,6 +3,38 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.4.0 — 2026-10-11 — calibration and reference materials / градуировки и база СО
+
+**English**
+- Calibration curves: linear, through zero, quadratic, square root; any of them in log-log coordinates.
+- Valid concentration range and recalibration (drift correction by reference samples).
+- Concentrations per burn, normalisation of concentrations relative to the alloy base, element value averaged over its lines, base element = 100 % − sum.
+- Verified number for number against the reference implementation on real methods: 67 curves rebuilt bit-exactly; thousands of concentrations equal to the last digit.
+- Calibration screen: reference samples of the method, burning a selected sample, certified vs calculated composition, curve plot with points that can be excluded, curve type, formula and statistics.
+- Reference materials database: groups → sets → samples with certified values and uncertainties, certificate, producer and expiry date; CSV import/export for Excel; adding samples to a method.
+
+**По-русски**
+- Градуировочные кривые: прямая, через ноль, парабола, корень; любая — в логарифмах.
+- Допустимый диапазон концентраций и рекалибровка — поправка дрейфа по образцам.
+- Расчёт концентраций:
+  - по каждому прожигу;
+  - нормировка концентраций относительно основы;
+  - концентрация элемента — среднее по его линиям;
+  - основа — 100 % минус сумма остальных.
+- Сверка с эталонной реализацией на настоящих методиках:
+  - 67 кривых построены бит в бит;
+  - тысячи концентраций совпали до последнего знака.
+- Экран «Градуировка»:
+  - СО методики и прожиг выбранного СО;
+  - сравнение аттестованного и посчитанного состава;
+  - график кривой: точки можно исключать;
+  - вид кривой, формула, статистика.
+- База стандартных образцов:
+  - группы → комплекты → образцы;
+  - аттестованные значения и погрешности, свидетельство, изготовитель, срок;
+  - импорт и экспорт CSV для Excel;
+  - добавление СО в методику.
+
 ## 0.3.0 — 2026-10-10 — new user interface / новый интерфейс
 
 **English**
