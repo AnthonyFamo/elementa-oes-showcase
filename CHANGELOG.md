@@ -3,6 +3,29 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.5.0 — 2026-10-11 — database and backup / база данных и резервная копия
+
+**English**
+- All program data in one place, the program's own Data folder: an SQLite database (analyses and every burn spectrum, compressed), settings, reference materials, methods, log.
+- Spectra are tagged by purpose (analysis, calibration, standardisation, recalibration, service).
+- One-file backup (.ebak) for engineers: calibration data is always included, routine analyses optionally; restore on restart keeps the previous data aside.
+- Analyses are searched and opened from the database.
+- "About" window: version, licence, instrument adapter, data location, developer.
+- Mock-ups of the analysis certificate, the report template editor and user-defined analysis fields.
+
+**По-русски**
+- Все данные — в собственной папке программы Data:
+  - база SQLite: анализы и спектры всех прожигов (в сжатом виде);
+  - настройки, стандартные образцы, методики, журнал.
+- У каждого спектра есть назначение: анализ, градуировка, стандартизация, рекалибровка, сервис.
+- Резервная копия одним файлом (.ebak), делает инженер:
+  - данные градуировок входят всегда;
+  - анализы образцов — по выбору.
+- Восстановление — при перезапуске; прежние данные сохраняются рядом.
+- Поиск и открытие анализов из базы.
+- Окно «О программе»: версия, лицензия, адаптер прибора, где лежат данные, разработчик.
+- Макеты сертификата анализа, редактора шаблона отчёта и настраиваемых полей анализа.
+
 ## 0.4.0 — 2026-10-11 — calibration and reference materials / градуировки и база СО
 
 **English**
