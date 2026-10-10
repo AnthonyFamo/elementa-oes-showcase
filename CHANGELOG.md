@@ -3,6 +3,23 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.6.0 — 2026-10-11 — programs and subprograms / основы и подпрограммы
+
+**English**
+- Analytical methods are stored in the database as programs (alloy base) and subprograms, with full version history; no files to open during work.
+- Start screen: pick a base, its subprograms unfold below, then choose lab or field mode.
+- Master screen to enable or lock bases and subprograms, copy, rename, reorder, roll back versions, export and import.
+- Ready-made subprograms for steels and cast irons, plus "orientation" subprograms for Fe, Cu and Al.
+
+**По-русски**
+- Методики хранятся в базе как основы и подпрограммы с полной историей версий; файлы при работе не открываются.
+- Стартовый экран: выбрали основу — под ней раскрылись подпрограммы, затем лабораторный или полевой режим.
+- Экран мастера:
+  - включение и блокировка основ и подпрограмм;
+  - копия, переименование, порядок;
+  - возврат версии, выгрузка и загрузка файлом.
+- Заготовки подпрограмм для сталей и чугунов, ориентационные подпрограммы Fe, Cu и Al.
+
 ## 0.5.0 — 2026-10-11 — database and backup / база данных и резервная копия
 
 **English**

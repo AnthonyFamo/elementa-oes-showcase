@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.5.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.6.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -22,6 +22,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Calibration.** Curves of several types (linear, through zero, quadratic, square root, log-log), built from certified reference materials. Concentrations relative to the alloy base, valid ranges, recalibration (drift correction by reference samples).
 - **Reference materials database.** Groups → sets → samples with certified values, uncertainties, certificate and expiry date; CSV import/export for Excel.
 - **Sample analysis.** Several burns per sample with mean, SD, RSD, min and max. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
+- **Programs and subprograms.** Methods live in the database with version history: pick an alloy base, then a subprogram (e.g. stainless steels), then lab or field mode.
 - **Lab mode and field mode.** Lab mode is a dense ribbon UI for mouse and keyboard. Field mode has large controls for a tablet used with gloves.
 - **Roles and themes.** Operator, engineer and master roles; the engineer sees spectra, per-burn plots and drift. Light, dark and system themes.
 - **Data.** Everything in the program's own folder: an SQLite database with analyses and every burn spectrum, plus methods and reference materials. One-file backup and restore for moving to another computer; CSV export.
@@ -44,7 +45,7 @@ flowchart TD
 
 Dependencies point only downwards: the core knows nothing about the UI or the drivers. New spectrometer models are added as separate driver assemblies.
 
-**Testing.** 102 automated tests (xUnit):
+**Testing.** 106 automated tests (xUnit):
 - protocol frames and checksums are checked against recorded network traffic;
 - the driver is tested end to end against the simulator;
 - every ported processing and calibration algorithm is checked number for number against the reference implementation on real methods: line intensities, 67 calibration curves rebuilt bit-exactly, thousands of concentrations.
