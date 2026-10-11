@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.10.0 — 2026-10-11 — 14 languages, translated program names, UI polish / 14 языков, названия программ на языках, доработка интерфейса
+
+**English**
+- Spanish and Portuguese added — 14 interface languages in total.
+- Analytical program names are translated too: factory programs (cast irons, stainless, free-cutting steels…) come in all 14 languages; user-created ones can be renamed per language.
+- Consistent tiles on the start screen, cleaner status bar, a single role indicator, a more readable notification, an updated "About" window with the actual Windows version.
+- The installer runs in 10 languages.
+
+**По-русски**
+- Добавлены испанский и португальский — всего 14 языков интерфейса.
+- Названия аналитических программ тоже переводятся: заводские (чугуны, нержавеющие, автоматные стали…) — на всех 14 языках, свои можно переименовать на каждом языке.
+- Единые плитки на стартовом экране, чище строка состояния, роль показана в одном месте, заметнее уведомления, обновлённое окно «О программе» с реальной версией Windows.
+- Установщик — на 10 языках.
+
 ## 0.9.0 — 2026-10-11 — 12 languages / 12 языков
 
 **English**
