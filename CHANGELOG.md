@@ -3,6 +3,16 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.12.0 — 2026-10-11 — activity log / журнал действий
+
+**English**
+- Activity log: who did what and when — sign-ins and passwords, programs, calibrations, reference materials, instrument, backups, analyses. Stored in the encrypted instrument database; records are chained with SHA-256 hashes, so editing or deleting them outside the program is detected. Filters by period, section and text, CSV export.
+- Technical log split by month and kept for 13 months.
+
+**По-русски**
+- Журнал действий: кто, когда и что сделал — вход и пароли, программы, градуировки, стандартные образцы, прибор, резервные копии, анализы. Хранится в зашифрованной базе прибора; записи связаны цепочкой отпечатков SHA-256 — правка или удаление в обход программы обнаруживаются. Фильтры по периоду, разделу и тексту, выгрузка в CSV.
+- Технический журнал — по месяцам, хранится 13 месяцев.
+
 ## 0.11.0 — 2026-10-11 — role passwords / пароли ролей
 
 **English**

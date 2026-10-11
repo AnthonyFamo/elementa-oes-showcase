@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.11.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.12.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -25,6 +25,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
 - **Alloy base detection.** The base is recognised from matrix lines of the spark spectrum after every burn (1091/1091 test spectra correct); wrong subprogram → warning and suggested switch.
 - **Roles and passwords.** Operator / engineer / master; the master password is set and recovered with a signed challenge–response code (ECDSA) from a separate native-code generator.
+- **Activity log.** Tamper-evident audit trail (SHA-256 hash chain) of sign-ins, program and calibration changes, backups and analyses.
 - **Installer.** Inno Setup package with a USB-stick workflow: the instrument backup next to the installer is picked up at first start.
 - **Languages.** UTF-8 language table (Excel-friendly), 14 interface languages (Russian, English, Italian, Spanish, Portuguese, French, German, Chinese, Japanese, Korean, Polish, Uzbek, Kazakh), program names included, switched instantly; labels adapt to button size.
 - **Programs and subprograms.** Methods live in the database with version history: pick an alloy base, then a subprogram (e.g. stainless steels), then lab or field mode.
