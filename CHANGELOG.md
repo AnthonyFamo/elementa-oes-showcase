@@ -3,6 +3,18 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.11.0 — 2026-10-11 — role passwords / пароли ролей
+
+**English**
+- Operator works without a password; engineer and master roles require passwords (stored only as PBKDF2 hashes inside the encrypted instrument database).
+- The master sets the engineer password.
+- The master password is set — or recovered — with a challenge–response code: the program shows a short request code, the master's separate generator answers with an ECDSA digital signature. The program holds only the public key, so the response cannot be forged even by taking the program apart; the generator is compiled to native code.
+
+**По-русски**
+- Оператор работает без пароля; роли инженера и мастера — по паролю (хранятся только отпечатки PBKDF2 в зашифрованной базе прибора).
+- Пароль инженера задаёт мастер.
+- Пароль мастера задаётся и восстанавливается кодом «запрос — ответ»: программа показывает короткий код-запрос, отдельный генератор мастера отвечает цифровой подписью ECDSA. В программе только открытый ключ — ответ не подделать даже разобрав программу; генератор собран в машинный код.
+
 ## 0.10.0 — 2026-10-11 — 14 languages, translated program names, UI polish / 14 языков, названия программ на языках, доработка интерфейса
 
 **English**
