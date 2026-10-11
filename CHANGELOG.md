@@ -3,6 +3,24 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.7.0 — 2026-10-11 — data protection, multi-instrument, languages, base detection / защита данных, несколько приборов, языки, определение основы
+
+**English**
+- Each instrument's database is an encrypted file (SQLCipher) named by instrument serial number and creation time; per-database keys are protected by Windows (DPAPI).
+- Password-protected backups (AES-256 + HMAC, PBKDF2); first start offers to restore the instrument's backup from a USB stick.
+- One installation can hold the databases of several instruments: add once from a backup, then switch by selection.
+- Exchange files for subprograms, reference materials (plus CSV), spectra and analyses.
+- Alloy base detection from the spark spectrum after every burn, with a warning and a suggested switch; "Auto" mode picks the base from the first burn. Matrix-line algorithm: 1091 of 1091 test spectra (Al, Cu, Fe, Ni, Ti alloys) classified correctly.
+- Interface translation from a UTF-8 language table (Excel-friendly): Russian and English now, 12 languages planned. Labels adapt to button size (wrap, smaller font, ellipsis with tooltip); a test checks translation length limits.
+
+**По-русски**
+- База каждого прибора — зашифрованный файл (SQLCipher), имя — номер прибора и время создания; ключи защищены средствами Windows (DPAPI).
+- Резервные копии с паролем; при первом запуске — восстановление копии прибора с флешки.
+- В одной программе — базы нескольких приборов: добавить один раз из копии, дальше переключение выбором.
+- Файлы обмена: подпрограммы, стандартные образцы (и CSV), спектры, анализы.
+- Определение основы сплава по спектру после каждого прожига: предупреждение и предложение сменить подпрограмму; режим «Авто». По матричным линиям: 1091 из 1091 проверочного спектра (Al, Cu, Fe, Ni, Ti) — верно.
+- Перевод интерфейса по языковой таблице в UTF-8 (открывается в Excel): сейчас русский и английский, в планах 12 языков. Подписи подстраиваются под кнопку; тест проверяет длину переводов.
+
 ## 0.6.0 — 2026-10-11 — programs and subprograms / основы и подпрограммы
 
 **English**

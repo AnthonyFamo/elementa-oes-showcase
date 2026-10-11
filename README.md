@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.6.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.7.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -22,6 +22,9 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Calibration.** Curves of several types (linear, through zero, quadratic, square root, log-log), built from certified reference materials. Concentrations relative to the alloy base, valid ranges, recalibration (drift correction by reference samples).
 - **Reference materials database.** Groups → sets → samples with certified values, uncertainties, certificate and expiry date; CSV import/export for Excel.
 - **Sample analysis.** Several burns per sample with mean, SD, RSD, min and max. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
+- **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
+- **Alloy base detection.** The base is recognised from matrix lines of the spark spectrum after every burn (1091/1091 test spectra correct); wrong subprogram → warning and suggested switch.
+- **Languages.** UTF-8 language table (Excel-friendly), Russian and English now, 12 languages planned; labels adapt to button size.
 - **Programs and subprograms.** Methods live in the database with version history: pick an alloy base, then a subprogram (e.g. stainless steels), then lab or field mode.
 - **Lab mode and field mode.** Lab mode is a dense ribbon UI for mouse and keyboard. Field mode has large controls for a tablet used with gloves.
 - **Roles and themes.** Operator, engineer and master roles; the engineer sees spectra, per-burn plots and drift. Light, dark and system themes.
