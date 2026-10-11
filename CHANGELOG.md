@@ -3,6 +3,22 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.13.0 — 2026-10-11 — certificate of analysis / сертификат анализа
+
+**English**
+- Certificate of analysis (A4): lab header and logo, number and date, analysis fields, target grade, per-burn values, mean and expanded uncertainty ±U (k = 2), signatures, QR code, footer with program and instrument data. Export to PDF, HTML, TXT, CSV and Excel; printing.
+- SD and RSD columns are optional in the report template; a legend explains the symbols.
+- Custom analysis fields: text, list, number, date, auto-numbered counter (per year); required fields, “in report”, and a 🔒 “remember” lock that carries the value to the next sample.
+- Report template editor: organisation, logo, title, note, signatures, columns, font and colour, preview; templates are exchanged as `.eltmpl` files.
+- All new texts in 14 languages.
+
+**По-русски**
+- Сертификат анализа (A4): шапка лаборатории с логотипом, номер и дата, поля анализа, марка-задание, значения по прожигам, среднее и расширенная неопределённость ±U (k = 2), подписи, QR-код, нижняя строка с данными программы и прибора. Выгрузка в PDF, HTML, TXT, CSV и Excel; печать.
+- Столбцы СКО и ОСКО — по выбору в шаблоне; под таблицей — расшифровка обозначений.
+- Свои поля анализа: текст, список, число, дата, счётчик номера (по годам); обязательные, «в отчёте» и замочек 🔒 «помнить» — значение переходит в следующий анализ.
+- Окно шаблона отчёта: организация, логотип, заголовок, примечание, подписи, столбцы, шрифт и цвет, предпросмотр; обмен шаблонами — файлы `.eltmpl`.
+- Все новые надписи — на 14 языках.
+
 ## 0.12.0 — 2026-10-11 — activity log / журнал действий
 
 **English**
