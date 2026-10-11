@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.14.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.15.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -25,6 +25,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
 - **Alloy base detection.** The base is recognised from matrix lines of the spark spectrum after every burn (1091/1091 test spectra correct); wrong subprogram → warning and suggested switch.
 - **Roles and passwords.** Operator / engineer / master; the master password is set and recovered with a signed challenge–response code (ECDSA) from a separate native-code generator.
+- **Template editor.** WYSIWYG page preview split into A4 pages: drag-and-drop block and field order, per-element fonts and alignment, logo size, page colour, text or image watermark, shapes (lines, rectangles, ellipses, 8-direction arrows, semi-transparent callouts) that are dragged with the mouse, undo/redo. Printing through the standard Windows print dialog.
 - **Analysis report and certificate of conformity.** Two documents with their own templates: a detailed lab report and a customer certificate that confirms (or rejects) the declared alloy grade, with grade limits, out-of-limit marks (↑ red / ↓ blue, readable on b/w printers), excluded burns struck through, certificate numbering on issue, lab header with logo, QR code and Code 128 sample barcode. Composition table horizontal (element columns) or vertical. Results export to CSV, Excel and TXT.
 - **Certificate of analysis (0.13).** A4 certificate with the lab header and logo, analysis fields, per-burn values, mean and expanded uncertainty (±U, k = 2; SD and RSD optional), signatures and a QR code. PDF, HTML, TXT, CSV and Excel export, printing; reusable report templates (`.eltmpl`).
 - **Custom analysis fields.** Text, list, number, date and auto-numbered fields (certificate numbers restart every year); required fields and a 🔒 “remember” lock that carries a value over to the next sample.
@@ -56,7 +57,7 @@ flowchart TD
 
 Dependencies point only downwards: the core knows nothing about the UI or the drivers. New spectrometer models are added as separate driver assemblies.
 
-**Testing.** 132 automated tests (xUnit):
+**Testing.** 133 automated tests (xUnit):
 - protocol frames and checksums are checked against recorded network traffic;
 - the driver is tested end to end against the simulator;
 - every ported processing and calibration algorithm is checked number for number against the reference implementation on real methods: line intensities, 67 calibration curves rebuilt bit-exactly, thousands of concentrations.
@@ -89,10 +90,11 @@ Version history: [CHANGELOG.md](CHANGELOG.md).
 - **Анализ образца.** Несколько прожигов, среднее, СКО, RSD. Плохие прожиги отбраковываются автоматически, оператор может отбраковать любой прожиг вручную.
 - **Сертификат анализа.** Шапка лаборатории с логотипом, поля анализа, значения по прожигам, среднее и ±U (k = 2; СКО и ОСКО — по выбору), подписи, QR-код. PDF, HTML, TXT, CSV, Excel, печать; шаблоны отчёта.
 - **Протокол и сертификат соответствия (0.14).** Подробный протокол для лаборатории и сертификат соответствия заявленной марке для заказчика, у каждого свой шаблон: нормы марки, отметки выше/ниже нормы, зачёркнутые выброшенные прожиги, номер сертификата при выдаче, логотип, QR-код и штрих-код образца; результаты в CSV, Excel, TXT.
+- **Редактор шаблонов (0.15).** Лист по страницам A4, порядок блоков и полей перетаскиванием, оформление, размер логотипа, фон, водяной знак, фигуры и полупрозрачные сноски, отмена правок; печать через стандартное окно Windows.
 - **Поля анализа.** Свои поля (текст, список, число, дата, счётчик номера сертификата), обязательные поля и замочек «помнить».
 - **Режимы.** Лабораторный и полевой (крупные кнопки для планшета и перчаток).
 - **Роли и темы.** Роли: оператор, инженер, мастер. Темы: светлая и тёмная.
 
-Сейчас это опытный образец, версия 0.14.0. Все данные — в базе SQLite в папке программы; есть резервная копия одним файлом. Расчёт градуировок и база СО готовы. Готов сертификат анализа. Следующий шаг — построить кривые на приборе, затем марка сплава.
+Сейчас это опытный образец, версия 0.15.0. Все данные — в базе SQLite в папке программы; есть резервная копия одним файлом. Расчёт градуировок и база СО готовы. Готов сертификат анализа. Следующий шаг — построить кривые на приборе, затем марка сплава.
 
 Исходный код закрыт. Здесь — описание, снимки экранов и история версий.

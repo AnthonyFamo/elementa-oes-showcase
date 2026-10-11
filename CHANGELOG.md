@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.15.0 — 2026-10-12 — template editor / редактор шаблонов
+
+**English**
+- WYSIWYG preview and editor: A4 pages, drag-and-drop order of blocks and field rows, fonts, sizes, bold/italic/underline, alignment, colours; logo size; page colour; text or image watermark; shapes — text, line, rectangle, ellipse, arrows in 8 directions, semi-transparent callout — dragged and resized with the mouse; undo/redo; document-only fields.
+- Certificate numbers follow the company's own numbering (asked on issue).
+- Printing via the standard Windows print dialog; small fixed footer line.
+- Field mode polish: Field Reports folders, no scrollbars, full-size buttons.
+
+**По-русски**
+- Предпросмотр и редактор: страницы A4, порядок блоков и строк полей перетаскиванием, шрифты, размеры, Ж/К/Ч, выравнивание, цвета; размер логотипа; цвет страницы; водяной знак текстом или картинкой; фигуры — надпись, линия, прямоугольник, эллипс, стрелки в 8 направлениях, полупрозрачная сноска — двигаются и меняют размер мышью; отмена правок; поля «только в документе».
+- Номер сертификата — по нумерации предприятия (спрашивается при выдаче).
+- Печать через стандартное окно Windows; неизменная нижняя строка мелким шрифтом.
+- Полевой режим: папки Field Reports, без полос прокрутки, кнопки на всю область.
+
 ## 0.14.0 — 2026-10-12 — report and certificate of conformity / протокол и сертификат соответствия
 
 **English**
