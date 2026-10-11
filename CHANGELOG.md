@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.8.0 — 2026-10-11 — installer / установщик
+
+**English**
+- Windows installer (Inno Setup), Russian and English: install for all users or just for the current user; the runtime ships with the program.
+- Optional database viewer component, downloaded during installation.
+- USB workflow: put the installer and the instrument's backup on a stick — after installation the program finds the backup at first start and only asks for its password.
+- Program files open by double-click (backups, subprograms, reference materials, spectra, analyses); a single running instance receives them.
+
+**По-русски**
+- Установщик для Windows (Inno Setup), русский и английский: для всех пользователей или только для себя; среда выполнения — вместе с программой.
+- По желанию — программа просмотра базы, скачивается при установке.
+- Работа с флешкой: установщик и резервная копия прибора рядом — после установки программа сама находит копию при первом запуске и спрашивает только пароль.
+- Файлы программы открываются двойным щелчком (копии, подпрограммы, стандартные образцы, спектры, анализы); работает одна копия программы.
+
 ## 0.7.0 — 2026-10-11 — data protection, multi-instrument, languages, base detection / защита данных, несколько приборов, языки, определение основы
 
 **English**
