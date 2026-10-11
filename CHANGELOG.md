@@ -3,6 +3,26 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.14.0 — 2026-10-12 — report and certificate of conformity / протокол и сертификат соответствия
+
+**English**
+- Two documents with separate templates: a detailed analysis report (lab) and a certificate of conformity to the declared grade (customer).
+- Grade limits and verdict from the grade library (case-insensitive, Latin/Cyrillic look-alike letters and former grade names); if the grade is unknown, the operator chooses the verdict.
+- Composition table horizontal (element columns in blocks, like classic OES software) or vertical; excluded burns struck through; above / below limit in red ↑ / blue ↓; base element per burn.
+- Lab header from separate address fields, resizable logo, QR code, Code 128 sample barcode; live page preview.
+- Results export to CSV, Excel and TXT (choice of separator).
+- Burn buttons: exclude / delete, restore the last 3 deleted; change the analytical program inside the analysis with recalculation; operator name list with suggestions.
+- Field mode reworked: bigger controls, mouse tilt-wheel and touch paging, optional statistics columns.
+
+**По-русски**
+- Два документа со своими шаблонами: подробный протокол анализа (лаборатория) и сертификат соответствия заявленной марке (заказчик).
+- Нормы и вердикт — по марочнику (без учёта регистра, похожих русских и латинских букв и прежних названий марок); марки нет — решение выбирает оператор.
+- Таблица состава горизонтально (элементы столбцами блоками) или вертикально; выброшенные прожиги зачёркнуты; выше / ниже нормы — красным ↑ / синим ↓; основа и по прожигам.
+- Шапка из отдельных строк реквизитов, логотип с настраиваемым размером, QR-код, штрих-код образца Code 128; предпросмотр листа.
+- Результаты в CSV, Excel и TXT (с выбором разделителя).
+- Кнопки у прожигов: выбросить / удалить, вернуть 3 последних удалённых; смена подпрограммы прямо в анализе с пересчётом; список фамилий операторов с подсказками.
+- Полевой режим переработан: крупные кнопки, листание боковым колесом мыши и пальцем, дополнительные столбцы статистики.
+
 ## 0.13.0 — 2026-10-11 — certificate of analysis / сертификат анализа
 
 **English**
