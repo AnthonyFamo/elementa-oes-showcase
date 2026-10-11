@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.8.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.9.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -25,7 +25,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
 - **Alloy base detection.** The base is recognised from matrix lines of the spark spectrum after every burn (1091/1091 test spectra correct); wrong subprogram → warning and suggested switch.
 - **Installer.** Inno Setup package with a USB-stick workflow: the instrument backup next to the installer is picked up at first start.
-- **Languages.** UTF-8 language table (Excel-friendly), Russian and English now, 12 languages planned; labels adapt to button size.
+- **Languages.** UTF-8 language table (Excel-friendly), 12 interface languages (Russian, English, Italian, French, German, Chinese, Japanese, Korean, Polish, Uzbek, Kazakh), switched instantly; labels adapt to button size.
 - **Programs and subprograms.** Methods live in the database with version history: pick an alloy base, then a subprogram (e.g. stainless steels), then lab or field mode.
 - **Lab mode and field mode.** Lab mode is a dense ribbon UI for mouse and keyboard. Field mode has large controls for a tablet used with gloves.
 - **Roles and themes.** Operator, engineer and master roles; the engineer sees spectra, per-burn plots and drift. Light, dark and system themes.

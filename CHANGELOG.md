@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.9.0 — 2026-10-11 — 12 languages / 12 языков
+
+**English**
+- Interface translated into 12 languages: Russian, English, Italian, French, German, Chinese (Traditional and Simplified), Japanese, Korean, Polish, Uzbek, Kazakh (machine-drafted, to be reviewed by native speakers).
+- The language switches instantly, without a restart.
+- Button labels wrap only at spaces and hyphens, so CJK labels are not broken mid-word; an automated test checks label length in every language.
+- The installer ships the Visual C++ runtime next to the program and runs in 8 languages — nothing to install beforehand on a clean Windows PC.
+
+**По-русски**
+- Интерфейс на 12 языках: русский, английский, итальянский, французский, немецкий, китайский (традиционный и упрощённый), японский, корейский, польский, узбекский, казахский (машинный черновик, проверят носители языка).
+- Язык меняется сразу, без перезапуска.
+- Подписи кнопок переносятся только по пробелам и дефисам — иероглифы не рвутся посреди слова; тест проверяет длину надписей во всех языках.
+- Установщик кладёт Visual C++ Runtime рядом с программой и работает на 8 языках — на «чистой» Windows ничего ставить заранее не нужно.
+
 ## 0.8.0 — 2026-10-11 — installer / установщик
 
 **English**
