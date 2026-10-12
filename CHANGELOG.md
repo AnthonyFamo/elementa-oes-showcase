@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.16.0 — 2026-10-12 — in-place template editor / редактор внутри окна шаблона
+
+**English**
+- The page editor opens inside the template window (full app size) instead of a separate window.
+- Shapes are drawn over the page and move smoothly; a callout's box and pointer tip are dragged independently; vertical line; consistent icons; delete from the list.
+- Field values (sample, grade, notes, analysis fields) are editable in the preview; Ctrl + mouse wheel zoom 50–200 %; 36-colour palette.
+- Composition table: centred text, rounded cells, clearer borders, adjustable row height.
+
+**По-русски**
+- Редактор листа открывается внутри окна шаблона (на весь экран программы), а не отдельным окном.
+- Фигуры рисуются поверх листа и двигаются плавно; у сноски рамка и точка выноски перетаскиваются отдельно; вертикальная линия; иконки в общем стиле; удаление из списка.
+- В предпросмотре правятся значения (образец, марка, примечания, поля анализа); масштаб Ctrl + колесо 50–200 %; палитра из 36 цветов.
+- Таблица состава: текст по центру, скруглённые ячейки, заметные границы, регулируемая высота строк.
+
 ## 0.15.0 — 2026-10-12 — template editor / редактор шаблонов
 
 **English**
