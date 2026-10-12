@@ -3,6 +3,16 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.19.0 — 2026-10-12 — nearest grades / ближайшие марки
+
+**English**
+- Optional "Nearest grades" block: up to three grades from the grade library in three columns — name, match percentage, standard and out-of-limit elements line by line.
+- Leaving the template window or editor with unsaved changes asks for confirmation.
+
+**По-русски**
+- Блок «Ближайшие марки»: до трёх марок из марочника в три столбца — название, процент совпадения, стандарт и несоответствия построчно.
+- Выход из окна шаблона или редактора с несохранёнными изменениями — с подтверждением.
+
 ## 0.18.0 — 2026-10-12 — HTML templates and click-to-select / HTML-шаблоны и выбор щелчком
 
 **English**
