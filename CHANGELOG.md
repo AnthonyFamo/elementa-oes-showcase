@@ -3,6 +3,22 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.17.0 — 2026-10-12 — drawing tools and value formatting / рисование и оформление значений
+
+**English**
+- Shapes are placed with the mouse: click to drop one, or drag to size it like in Paint. A single free-angle arrow; lines stay horizontal or vertical.
+- Line breaks and lists (1. / 1) / ▪) in text boxes, callouts and the note; callout leader starts at the frame edge.
+- The selected element is shown with a dashed outline; field names and field values are formatted separately (strikethrough, superscript, subscript added).
+- More fonts, including Chinese, Japanese and Korean; Word-style alignment icons.
+- Composition table: light borderless cells by default, choice of separation style and fills for headers, base and cells.
+
+**По-русски**
+- Фигуры ставятся мышью: щелчок — на место, протягивание — с размером, как в Paint. Одна стрелка под любым углом; линии — только горизонтальные или вертикальные.
+- Перевод строки и списки (1. / 1) / ▪) в надписи, сноске и примечании; выноска сноски — от края рамки.
+- Выбранный элемент — в пунктирной рамке; название и значение поля оформляются отдельно (добавлены зачёркнутый, надстрочный, подстрочный).
+- Больше шрифтов, в том числе китайские, японские, корейские; значки выравнивания как в Word.
+- Таблица состава: по умолчанию светлые ячейки без рамок, выбор вида разделения и заливки заголовков, основы и ячеек.
+
 ## 0.16.0 — 2026-10-12 — in-place template editor / редактор внутри окна шаблона
 
 **English**
