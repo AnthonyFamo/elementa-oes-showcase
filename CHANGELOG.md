@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.18.0 — 2026-10-12 — HTML templates and click-to-select / HTML-шаблоны и выбор щелчком
+
+**English**
+- HTML documents are built from editable template files (page and parts with #Variables#); the output is readable, images go to a side folder, and values can be corrected in the browser before printing.
+- Click any field, block, logo or table cell on the page to select it; click empty space to deselect. Active insert tool is highlighted.
+- The master can correct a printed table value (measurements stay unchanged; the change is logged).
+- Formatting can be applied to a selected part of a field value; table caption text and alignment are configurable.
+
+**По-русски**
+- HTML-документ собирается из файлов-шаблонов (страница и куски с #Переменными#), которые можно править; результат читаемый, картинки — в отдельной папке, значения можно поправить в браузере перед печатью.
+- Щелчок по полю, блоку, логотипу или ячейке таблицы выбирает их; щелчок по пустому месту снимает выбор. Выбранный инструмент вставки подсвечен.
+- Мастер может исправить значение ячейки в документе (измерения не меняются, исправление пишется в журнал).
+- Оформление части значения поля; надпись над таблицей и её выравнивание настраиваются.
+
 ## 0.17.0 — 2026-10-12 — drawing tools and value formatting / рисование и оформление значений
 
 **English**
