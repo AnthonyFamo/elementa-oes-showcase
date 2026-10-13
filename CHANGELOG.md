@@ -3,6 +3,16 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.20.0 — 2026-10-13 — ready for the first instrument test / к первой проверке на приборе
+
+**English**
+- Temporary "Instrument (test)" window: connection and burn settings, detector reversal, raw-data capture, detailed log and live instrument status.
+- "Collect diagnostics" packs program info, settings, the technical log, recent raw burn data and the current analysis into one zip for remote troubleshooting.
+
+**По-русски**
+- Временное окно «Прибор (тест)»: настройки связи и прожига, разворот линеек, сохранение сырых данных, подробный журнал и состояние прибора в реальном времени.
+- «Собрать диагностику» — один zip со сведениями, настройками, техническим журналом, сырыми данными последних прожигов и текущим анализом для разбора на расстоянии.
+
 ## 0.19.0 — 2026-10-12 — nearest grades / ближайшие марки
 
 **English**
