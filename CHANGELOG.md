@@ -3,6 +3,16 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.21.0 — 2026-10-14 — flexible exposure phases / гибкое число фаз экспозиции
+
+**English**
+- The instrument driver now supports any number of exposure phases and a short "micro-burn", for experiments on the real instrument; regular burns are unchanged.
+- Temporary test parameters (purge, pre-spark, phases with time, frequency and energy) with presets, never saved to the subprogram.
+
+**По-русски**
+- Драйвер прибора поддерживает любое число фаз экспозиции и короткий «микропрожиг» — для опытов на приборе; обычный прожиг не изменился.
+- Временные пробные параметры (продувка, предобжиг, фазы со временем, частотой и энергией) с готовыми вариантами; в подпрограмму не сохраняются.
+
 ## 0.20.0 — 2026-10-13 — ready for the first instrument test / к первой проверке на приборе
 
 **English**
