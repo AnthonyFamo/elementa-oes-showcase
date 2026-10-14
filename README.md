@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.21.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.21.1 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -95,6 +95,6 @@ Version history: [CHANGELOG.md](CHANGELOG.md).
 - **Режимы.** Лабораторный и полевой (крупные кнопки для планшета и перчаток).
 - **Роли и темы.** Роли: оператор, инженер, мастер. Темы: светлая и тёмная.
 
-Сейчас это опытный образец, версия 0.21.0. Все данные — в базе SQLite в папке программы; есть резервная копия одним файлом. Расчёт градуировок и база СО готовы. Готов сертификат анализа. Следующий шаг — построить кривые на приборе, затем марка сплава.
+Сейчас это опытный образец, версия 0.21.1. Все данные — в базе SQLite в папке программы; есть резервная копия одним файлом. Расчёт градуировок и база СО готовы. Готов сертификат анализа. Следующий шаг — построить кривые на приборе, затем марка сплава.
 
 Исходный код закрыт. Здесь — описание, снимки экранов и история версий.
