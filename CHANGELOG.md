@@ -3,6 +3,20 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.23.0 — 2026-10-15 — interelement corrections, burn consistency / межэлементные поправки, сходимость прожигов
+
+**English**
+- Interelement corrections to the intensity ratio: additive (line overlap) and multiplicative (matrix effect), fitted together with the curve; concentrations, corrections and base are iterated to convergence.
+- “Suggest corrections…”: every candidate element is tried; only corrections that reduce the leave-one-out error by 10 % or more are offered, with coefficient and gain.
+- Burn consistency: Dixon outlier test after each burn, repeatability limit per element, optional automatic rejection.
+- Several base lines can be summed as the internal standard.
+
+**По-русски**
+- Межэлементные поправки к отношению интенсивностей: аддитивные (наложение линий) и мультипликативные (влияние матрицы), подбираются вместе с кривой; содержания, поправки и основа считаются итерациями.
+- «Предложить поправки…»: пробуется каждый элемент; предлагаются только поправки, снижающие ошибку без точки на 10 % и больше, с коэффициентом и выигрышем.
+- Сходимость прожигов: тест Диксона после каждого прожига, предел повторяемости по элементам, автоотбраковка по настройке.
+- Несколько линий основы могут суммироваться как внутренний стандарт.
+
 ## 0.22.0 — 2026-10-15 — curve types C = f(R) / новые виды кривых C = f(R)
 
 **English**
