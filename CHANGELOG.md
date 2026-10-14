@@ -3,6 +3,22 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.22.0 — 2026-10-15 — curve types C = f(R) / новые виды кривых C = f(R)
+
+**English**
+- Concentration-from-ratio curves next to the classic ones: line, parabola, cubic, power, exponential and shifted Lomakin–Scheibe law; inverse C → R for every type.
+- Point weights (burn scatter, 1/C, 1/C²), engineer-set weights, “add zero” point.
+- Curve quality: residual SD, leave-one-out error, BEC, detection-limit estimate, suspect points, Mandel test.
+- “Choose curve type…”: all candidates on the same points, ranked by leave-one-out error (not R²); simpler curve wins ties; cubic only from 8 points and only if monotonic.
+- Verified against factory calibrations on 155 reference-material spectra; console tool `jiebo curves` for the same comparison.
+
+**По-русски**
+- Кривые «содержание от отношения» рядом с прежними: прямая, парабола, кубическая, степенная, экспонента и Ломакина — Шейбе со сдвигом; обратный пересчёт C → R для всех видов.
+- Веса точек (по разбросу прожигов, 1/C, 1/C²), вес от инженера, точка (0; 0).
+- Оценки кривой: остаточное СКО, ошибка без точки, BEC, оценка предела обнаружения, подозрительные точки, тест Манделя.
+- «Подобрать вид кривой…»: все кандидаты по тем же точкам, лучший — по ошибке без точки (не по R²); из близких — более простой; кубическая — от 8 точек и только монотонная.
+- Сверка с заводскими градуировками на 155 спектрах стандартных образцов; консольная команда `jiebo curves`.
+
 ## 0.21.0 — 2026-10-14 — flexible exposure phases / гибкое число фаз экспозиции
 
 **English**

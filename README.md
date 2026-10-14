@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.21.3 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.22.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -20,6 +20,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Instrument simulator.** A built-in simulator replays recorded spectra, so the whole program can be developed and tested without hardware.
 - **Spectrum processing.** Background subtraction, line intensities, peak search, wavelength calibration on reference lines, spectral drift tracking and correction.
 - **Calibration.** Curves of several types (linear, through zero, quadratic, square root, log-log), built from certified reference materials. Concentrations relative to the alloy base, valid ranges, recalibration (drift correction by reference samples).
+- **Curve types C = f(R) (0.22).** Line, parabola, cubic, power, exponential and a shifted Lomakin–Scheibe law; point weights (by burn scatter, 1/C, 1/C²), “add zero”, leave-one-out error, BEC, detection-limit estimate, suspect points, Mandel test (ISO 8466-1) and a one-click curve-type picker that ranks candidates by leave-one-out error rather than R². Verified on 155 reference-material spectra.
 - **Reference materials database.** Groups → sets → samples with certified values, uncertainties, certificate and expiry date; CSV import/export for Excel.
 - **Sample analysis.** Several burns per sample with mean, SD, RSD, min and max. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
