@@ -3,6 +3,14 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.25.0 — 2026-10-15 — concentrations in the analysis table / концентрации в таблице анализа
+
+**English**
+- The analysis table and the field screen show element concentrations (%) per burn with statistics; base by difference; intensities remain available to the engineer.
+
+**По-русски**
+- Таблица анализа и полевой экран показывают концентрации элементов (%) по прожигам со статистикой; основа по разности; интенсивности доступны инженеру.
+
 ## 0.24.0 — 2026-10-15 — automatic background, line area, sub-pixel drift / автоматический фон, площадь линии, дробный дрейф
 
 **English**

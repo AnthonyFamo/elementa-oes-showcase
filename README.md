@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.24.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.25.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -24,7 +24,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Interelement corrections (0.23).** Line-overlap (additive) and matrix (multiplicative) corrections to the intensity ratio, fitted jointly with the curve; iterative base calculation; a “Suggest corrections” dialog that keeps only corrections that cut the leave-one-out error by 10 % or more. Burn consistency after every burn: Dixon outlier test and a repeatability limit (“one more burn needed”). Several base lines can be summed as the internal standard.
 - **Automatic background and peak area (0.24).** SNIP background around each line, Akima-spline interpolation and line area in nanometres (or peak height) as an alternative to hand-set slits; sub-pixel drift correction; line choice by concentration range with a smooth hand-over between lines; a “check the sample surface” warning when surface-sensitive elements flare in the first exposure phase; reference-material burns can be recomputed from stored spectra after changing the method.
 - **Reference materials database.** Groups → sets → samples with certified values, uncertainties, certificate and expiry date; CSV import/export for Excel.
-- **Sample analysis.** Several burns per sample with mean, SD, RSD, min and max. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
+- **Sample analysis.** Element concentrations (%) per burn with mean, SD, RSD, min and max once the method is calibrated (channel intensities before that; the engineer can switch); base element by difference. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
 - **Alloy base detection.** The base is recognised from matrix lines of the spark spectrum after every burn (1091/1091 test spectra correct); wrong subprogram → warning and suggested switch.
 - **Roles and passwords.** Operator / engineer / master; the master password is set and recovered with a signed challenge–response code (ECDSA) from a separate native-code generator.
