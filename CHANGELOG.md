@@ -3,6 +3,18 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.24.0 — 2026-10-15 — automatic background, line area, sub-pixel drift / автоматический фон, площадь линии, дробный дрейф
+
+**English**
+- New intensity mode: SNIP background around the line, Akima spline, line area in nm or peak height; the classic slit mode is unchanged.
+- Sub-pixel drift correction; line choice by concentration range or with a smooth hand-over; surface-cleaning warning from the two exposure phases.
+- Reference-material burns can be recomputed from stored spectra; the calibration screen gets intensity-mode and line-selection settings.
+
+**По-русски**
+- Новый способ интенсивности: фон SNIP вокруг линии, сплайн Акимы, площадь линии в нм или высота; прежний способ со щелями не изменился.
+- Дрейф в долях пикселя; выбор линии по диапазону содержаний или с плавным переходом; предупреждение о зачистке образца по двум фазам экспозиции.
+- Прожиги СО можно пересчитать по сохранённым спектрам; на экране градуировки — выбор способа интенсивности и сведения линий.
+
 ## 0.23.0 — 2026-10-15 — interelement corrections, burn consistency / межэлементные поправки, сходимость прожигов
 
 **English**

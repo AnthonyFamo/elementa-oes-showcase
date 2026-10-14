@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.23.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.24.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -22,6 +22,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Calibration.** Curves of several types (linear, through zero, quadratic, square root, log-log), built from certified reference materials. Concentrations relative to the alloy base, valid ranges, recalibration (drift correction by reference samples).
 - **Curve types C = f(R) (0.22).** Line, parabola, cubic, power, exponential and a shifted Lomakin–Scheibe law; point weights (by burn scatter, 1/C, 1/C²), “add zero”, leave-one-out error, BEC, detection-limit estimate, suspect points, Mandel test (ISO 8466-1) and a one-click curve-type picker that ranks candidates by leave-one-out error rather than R². Verified on 155 reference-material spectra.
 - **Interelement corrections (0.23).** Line-overlap (additive) and matrix (multiplicative) corrections to the intensity ratio, fitted jointly with the curve; iterative base calculation; a “Suggest corrections” dialog that keeps only corrections that cut the leave-one-out error by 10 % or more. Burn consistency after every burn: Dixon outlier test and a repeatability limit (“one more burn needed”). Several base lines can be summed as the internal standard.
+- **Automatic background and peak area (0.24).** SNIP background around each line, Akima-spline interpolation and line area in nanometres (or peak height) as an alternative to hand-set slits; sub-pixel drift correction; line choice by concentration range with a smooth hand-over between lines; a “check the sample surface” warning when surface-sensitive elements flare in the first exposure phase; reference-material burns can be recomputed from stored spectra after changing the method.
 - **Reference materials database.** Groups → sets → samples with certified values, uncertainties, certificate and expiry date; CSV import/export for Excel.
 - **Sample analysis.** Several burns per sample with mean, SD, RSD, min and max. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
