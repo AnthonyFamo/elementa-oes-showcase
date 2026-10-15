@@ -3,6 +3,16 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.26.0 — 2026-10-15 — alloy grade library / марочник
+
+**English**
+- Grade library in the instrument database (about 1 550 national-standard grades out of the box): aliases, types and classes, standards, formula limits, concessions, substitutes, foreign equivalents; element weights and typical contents; weighted matching with ±U and concession statuses; cast irons are not offered for steels.
+- Grade screen (checkbox tree of types and classes, standards filter, search, grade card with tolerance bars, standard PDF, own grades, `.elgrade` exchange); Type / Class / Standard drop-downs and a target-grade box in the analysis ribbon; grade bar with the verdict or the nearest grades; the report and certificate use the new library.
+
+**По-русски**
+- Марочник в базе прибора (около 1 550 марок ГОСТ/ТУ сразу после установки): другие обозначения, типы и классы, стандарты, формульные границы, уступки, заменители, зарубежные аналоги; веса элементов и типичные содержания; подбор с весами, статусы «на границе ±U» и «в пределах уступки»; чугуны не предлагаются для стали.
+- Экран марочника (дерево типов и классов с галочками, нормы, поиск, карточка с полосами допусков, PDF стандарта, свои марки, обмен `.elgrade`); списки Тип / Класс / Норма и поле марки-задания в ленте анализа; полоса марки с вердиктом или ближайшими марками; протокол и сертификат берут нормы из нового марочника.
+
 ## 0.25.0 — 2026-10-15 — concentrations in the analysis table / концентрации в таблице анализа
 
 **English**

@@ -5,7 +5,7 @@
 <p align="center"><b>Software for spark optical emission spectrometers</b><br>
 burn control · spectrum processing · element concentrations · alloy grade</p>
 
-<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.25.0 (prototype)</p>
+<p align="center">C# · .NET 8 · WinUI 3 · MVVM · ScottPlot · xUnit &nbsp;|&nbsp; version 0.26.0 (prototype)</p>
 
 > This is a public showcase. The source code is kept in a private repository.
 > *Это открытая витрина проекта; исходный код хранится в закрытом репозитории. Описание на русском — ниже.*
@@ -23,6 +23,7 @@ Elementa OES drives a spark optical emission spectrometer (OES) and turns its ra
 - **Curve types C = f(R) (0.22).** Line, parabola, cubic, power, exponential and a shifted Lomakin–Scheibe law; point weights (by burn scatter, 1/C, 1/C²), “add zero”, leave-one-out error, BEC, detection-limit estimate, suspect points, Mandel test (ISO 8466-1) and a one-click curve-type picker that ranks candidates by leave-one-out error rather than R². Verified on 155 reference-material spectra.
 - **Interelement corrections (0.23).** Line-overlap (additive) and matrix (multiplicative) corrections to the intensity ratio, fitted jointly with the curve; iterative base calculation; a “Suggest corrections” dialog that keeps only corrections that cut the leave-one-out error by 10 % or more. Burn consistency after every burn: Dixon outlier test and a repeatability limit (“one more burn needed”). Several base lines can be summed as the internal standard.
 - **Automatic background and peak area (0.24).** SNIP background around each line, Akima-spline interpolation and line area in nanometres (or peak height) as an alternative to hand-set slits; sub-pixel drift correction; line choice by concentration range with a smooth hand-over between lines; a “check the sample surface” warning when surface-sensitive elements flare in the first exposure phase; reference-material burns can be recomputed from stored spectra after changing the method.
+- **Alloy grade library (0.26).** About 1 550 national-standard grades (steels, cast irons, Fe–Ni/Fe–Co and Ni/Co alloys) ship with the program and live in the instrument database: aliases, type and class (10 types, 47 classes), standard, limits per element — including formula limits such as Ti ≥ 5·C computed from the measured composition, nominal-only grades (±10 %), concession (extended) limits, substitutes and about 8 000 foreign equivalents (ASTM/AISI, DIN/WNr, JIS, EN, GB, KS…). Elements carry a weight for matching — decisive ×3, normal ×1, impurity ×0.3 — assigned automatically from the letters of the grade designation; the typical content is the lower limit + 35 % of the range. Matching reports the weighted agreement, flags elements at the limit within ±U or within the concession, and never suggests a cast iron for a steel. A grade screen with a checkbox tree of types and classes, standards filter, search by designation or foreign equivalent, a grade card with tolerance bars against the measured composition, links to the standard’s PDF, own grades, `.elgrade` exchange; in the analysis the ribbon has Type / Class / Standard drop-downs and a target-grade box, and the grade bar shows the verdict (conforms / at the limit / does not conform) or the nearest grades.
 - **Reference materials database.** Groups → sets → samples with certified values, uncertainties, certificate and expiry date; CSV import/export for Excel.
 - **Sample analysis.** Element concentrations (%) per burn with mean, SD, RSD, min and max once the method is calibrated (channel intensities before that; the engineer can switch); base element by difference. Faulty burns are rejected automatically (no spark, saturation, large drift); the operator can also reject any burn by hand.
 - **Data protection.** Encrypted per-instrument databases (SQLCipher, keys protected by Windows DPAPI) and password-protected backups; several instruments in one installation.
@@ -72,11 +73,15 @@ Dependencies point only downwards: the core knows nothing about the UI or the dr
 | 1 | Core, instrument driver, simulator | done, hardware check pending |
 | 2 | Spectrum processing, wavelength calibration, drift tracking | done |
 | 3 | Calibration curves on certified reference materials, recalibration | calculation and screens done (0.4.0); curves on the instrument next |
-| 4 | Concentrations, alloy grade, reports (PDF, QR code) | report and certificate of conformity done (0.14.0); grade library and template editor next |
+| 4 | Concentrations, alloy grade, reports (PDF, QR code) | report, certificate, template editor and grade library done (0.26.0); grade verdict in the certificate next |
 | 5 | Passwords and permissions, installer with instrument adapters, report templates, server sync, GPS | database and backup done (0.5.0) |
 | 6 | More spectrometer models; later Elementa XRF and Elementa LIBS | planned |
 
 Version history: [CHANGELOG.md](CHANGELOG.md).
+
+![Grade library, dark theme](images/grades-dark.png)
+
+<p align="center"><img src="images/grade-card.png" width="720" alt="Grade card with tolerance bars"></p>
 
 ![Analysis screen, light theme](images/analysis-light.png)
 
@@ -94,10 +99,11 @@ Version history: [CHANGELOG.md](CHANGELOG.md).
 - **Сертификат анализа.** Шапка лаборатории с логотипом, поля анализа, значения по прожигам, среднее и ±U (k = 2; СКО и ОСКО — по выбору), подписи, QR-код. PDF, HTML, TXT, CSV, Excel, печать; шаблоны отчёта.
 - **Протокол и сертификат соответствия (0.14).** Подробный протокол для лаборатории и сертификат соответствия заявленной марке для заказчика, у каждого свой шаблон: нормы марки, отметки выше/ниже нормы, зачёркнутые выброшенные прожиги, номер сертификата при выдаче, логотип, QR-код и штрих-код образца; результаты в CSV, Excel, TXT.
 - **Редактор шаблонов (0.15).** Лист по страницам A4, порядок блоков и полей перетаскиванием, оформление, размер логотипа, фон, водяной знак, фигуры и полупрозрачные сноски, отмена правок; печать через стандартное окно Windows.
+- **Марочник (0.26).** Около 1 550 марок по ГОСТ и ТУ в базе прибора: другие обозначения, типы и классы, допуски с формульными границами (Ti ≥ 5·C), уступки, заменители и зарубежные аналоги; веса элементов по буквам маркировки, типичное содержание, подбор ближайших марок, отбор марок для подпрограммы, карточка марки с полосами допусков, свои марки и обмен файлами.
 - **Поля анализа.** Свои поля (текст, список, число, дата, счётчик номера сертификата), обязательные поля и замочек «помнить».
 - **Режимы.** Лабораторный и полевой (крупные кнопки для планшета и перчаток).
 - **Роли и темы.** Роли: оператор, инженер, мастер. Темы: светлая и тёмная.
 
-Сейчас это опытный образец, версия 0.21.3. Все данные — в базе SQLite в папке программы; есть резервная копия одним файлом. Расчёт градуировок и база СО готовы. Готов сертификат анализа. Следующий шаг — построить кривые на приборе, затем марка сплава.
+Сейчас это опытный образец, версия 0.26.0. Все данные — в базе SQLite в папке программы; есть резервная копия одним файлом. Расчёт градуировок и база СО готовы. Готов сертификат анализа. Следующий шаг — построить кривые на приборе, затем марка сплава.
 
 Исходный код закрыт. Здесь — описание, снимки экранов и история версий.
