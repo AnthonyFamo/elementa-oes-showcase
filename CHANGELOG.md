@@ -3,6 +3,24 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.27.0 — 2026-11-01 — control sample, out-of-range values, line-processing lab / контроль образцом, «< / >», подбор обработки линий
+
+**English**
+- Control sample: certified value, deviation Δ and tolerance √(U_cert² + U_meas²) per element in the analysis table (green / red), the CRM is recognised by the sample name or picked from the database; optional “control by CRM” block in the report; the tolerance rule and p % are set by the engineer.
+- Values outside the calibrated range are shown as “< limit” / “> limit” in the table, field screen, report, certificate and exports; grade matching treats such bounds by direction.
+- Honest curve error: leave-one-out error in % of the curve range and as a relative median above the lower limit; all curve types are compared on the same reference materials.
+- Line-processing lab: 24 processing variants per line on stored CRM spectra, best by leave-one-out error, for one channel or all channels, in the background with progress and cancel; the factory calibrations were rebuilt with it.
+- Burn time follows the instrument’s purge rule (at least 4 s for one exposure phase, 7 s for two); backups no longer include libraries; first start loads the factory calibrations in the background; 72 messages and 238 new strings translated into 14 languages; fixes from a code review; 261 automated tests.
+- Between 0.26.0 and 0.27.0 (0.26.1–0.26.23): hardware-test tools, a short pre-burn for automatic base detection followed by the main burn in one trigger press, factory calibrations shipped with the installer.
+
+**По-русски**
+- Контроль образцом: аттестованное значение, отклонение Δ и допуск √(U пасп² + U изм²) по каждому элементу в таблице анализа (зелёный / красный), СО узнаётся по имени образца или выбирается из базы; блок «Контроль по СО» в протоколе; правило допуска и p % задаёт инженер.
+- Содержание вне диапазона градуировки — «< граница» / «> граница» в таблице, полевом режиме, протоколе, сертификате и выгрузках; сверка с маркой учитывает направление.
+- Честная ошибка кривых: ошибка «без точки» в % от диапазона кривой и относительная медиана выше нижней границы; все виды кривых сравниваются на одних и тех же СО.
+- «Лаборатория методов»: 24 варианта обработки линии по сохранённым спектрам СО, лучший — по ошибке без точки, для канала или всех каналов, в фоне с ходом выполнения и отменой; заводские калибровки пересобраны с её помощью.
+- Время прожига — по правилу продувки прибора (не меньше 4 с при одной фазе, 7 с при двух); резервная копия без библиотек; при первом запуске заводские калибровки грузятся в фоне; 72 сообщения и 238 новых строк переведены на 14 языков; исправления по итогам проверки кода; 261 автотест.
+- Между 0.26.0 и 0.27.0 (0.26.1–0.26.23): средства проверки на приборе, короткий предварительный прожиг для автоопределения основы и затем основной прожиг за одно нажатие кнопок, заводские калибровки в установщике.
+
 ## 0.26.0 — 2026-10-15 — alloy grade library / марочник
 
 **English**
@@ -54,14 +72,14 @@ Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first r
 - Point weights (burn scatter, 1/C, 1/C²), engineer-set weights, “add zero” point.
 - Curve quality: residual SD, leave-one-out error, BEC, detection-limit estimate, suspect points, Mandel test.
 - “Choose curve type…”: all candidates on the same points, ranked by leave-one-out error (not R²); simpler curve wins ties; cubic only from 8 points and only if monotonic.
-- Verified against factory calibrations on 155 reference-material spectra; console tool `jiebo curves` for the same comparison.
+- Verified against factory calibrations on 155 reference-material spectra; a console tool runs the same comparison.
 
 **По-русски**
 - Кривые «содержание от отношения» рядом с прежними: прямая, парабола, кубическая, степенная, экспонента и Ломакина — Шейбе со сдвигом; обратный пересчёт C → R для всех видов.
 - Веса точек (по разбросу прожигов, 1/C, 1/C²), вес от инженера, точка (0; 0).
 - Оценки кривой: остаточное СКО, ошибка без точки, BEC, оценка предела обнаружения, подозрительные точки, тест Манделя.
 - «Подобрать вид кривой…»: все кандидаты по тем же точкам, лучший — по ошибке без точки (не по R²); из близких — более простой; кубическая — от 8 точек и только монотонная.
-- Сверка с заводскими градуировками на 155 спектрах стандартных образцов; консольная команда `jiebo curves`.
+- Сверка с заводскими градуировками на 155 спектрах стандартных образцов; ту же сверку делает консольная команда.
 
 ## 0.21.0 — 2026-10-14 — flexible exposure phases / гибкое число фаз экспозиции
 
