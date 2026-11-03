@@ -3,6 +3,26 @@
 Versions are **0.X.Y** while the program is a prototype; 1.0 will be the first release.
 *Пока программа — опытный образец, номер версии 0.X.Y; 1.0 — первый выпуск.*
 
+## 0.28.0 — 2026-11-03 — per-channel base-relative mode, robust drift tracking, peak-top window, strict error / «к основе» у канала, устойчивый дрейф, окно по вершине, строгая ошибка
+
+**English**
+- Per-channel choice of curve content: relative to the alloy base or absolute; mixed compositions are computed consistently; errors of both modes are compared in absolute %.
+- Robust drift tracking: nearest pronounced peak, median over the line's channels, cross-correlation check of the whole detector line; non-zero shifts on the reference set 1696 → 70, maximum 8 → 1 px. Old methods keep the classic tracker and their numbers.
+- Integration window on the true line top (sub-pixel, median over reference materials); windows from ±1 px; additive and multiplicative corrections; variants with non-positive intensity on a reference material with real content are not chosen.
+- Strict (nested) leave-one-out error that re-selects processing, content mode, curve type and corrections without each reference material; keep-or-replace decisions use it.
+- Lomakin–Scheibe with corrections keeps every point on the working branch (no hidden zero floor).
+- Factory calibrations rebuilt: median leave-one-out error 3.1 → 1.45 % of the range, strict 4.55 → 2.7 %.
+- Calibration screen fixes from a full inventory of its 101 controls and from a code review; 85 new strings in 14 languages; 317 automated tests.
+
+**По-русски**
+- Содержание на кривой выбирается у каждого канала: к основе или абсолютное; смешанный состав считается согласованно; ошибки обоих режимов сравниваются в абсолютных %.
+- Устойчивое слежение за дрейфом: ближайший выраженный пик, медиана по каналам линейки, проверка корреляцией всей линейки; ненулевых сдвигов 1696 → 70, наибольший 8 → 1 пикс. Старые методики — прежнее слежение и прежние числа.
+- Окно по вершине линии (доля пикселя, медиана по СО); окна от ±1 пикс.; поправки сдвигом и множителем; варианты с R ≤ 0 у СО с заметным содержанием не выбираются.
+- Строгая (вложенная) ошибка без точки: без каждого СО заново выбираются обработка, режим, вид кривой и поправки; по ней решается, оставить ли прежний вариант.
+- Ломакина — Шейбе с поправками: все точки на рабочей ветви (без скрытого «пола» C = 0).
+- Заводские калибровки пересобраны: медиана ошибки без точки 3,1 → 1,45 % диапазона, строгая 4,55 → 2,7 %.
+- Исправления экрана градуировки по описи всех 101 элемента и по проверке кода; 85 новых строк на 14 языках; 317 автотестов.
+
 ## 0.27.0 — 2026-11-01 — control sample, out-of-range values, line-processing lab / контроль образцом, «< / >», подбор обработки линий
 
 **English**
